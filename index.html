@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terrestrial Analogue Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+
+    <header class="hero">
+        <p class="eyebrow">NASA SPACE APPS CHALLENGE 2026</p>
+
+        <h1>Terrestrial Analogue Explorer</h1>
+
+        <p class="hero-description">
+            Explore Earth's extreme environments and discover
+            how they can help us prepare for the Moon and Mars.
+        </p>
+    </header>
+
+    <main>
+
+        <!-- WORLD MAP -->
+        <section class="map-section" id="mapSection">
+
+            <div class="section-heading">
+                <p class="eyebrow">EXPLORE THE PLANET</p>
+                <h2>Where on Earth?</h2>
+                <p>
+                    Select a marker to discover a potential
+                    terrestrial analogue site.
+                </p>
+            </div>
+
+            <div id="map"></div>
+
+            <p class="map-note">
+                Location markers are approximate.
+                Site information is based on our research shortlist.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH AND SITE CARDS -->
+        <section class="sites-section" id="sitesSection">
+
+            <div class="section-heading">
+                <p class="eyebrow">THE DATABASE</p>
+                <h2>Explore analogue sites</h2>
+                <p>
+                    Search for a location or filter by environment.
+                </p>
+            </div>
+
+            <div class="filters">
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search sites or countries..."
+                    aria-label="Search sites or countries"
+                >
+
+                <select
+                    id="environmentFilter"
+                    aria-label="Filter by environment"
+                >
+                    <option value="All">All environments</option>
+                    <option value="Moon">Moon</option>
+                    <option value="Mars">Mars</option>
+                </select>
+
+            </div>
+
+            <p id="resultsCount" class="results-count"></p>
+
+            <div class="cards" id="siteContainer"></div>
+
+        </section>
+
+
+        <!-- FULL SITE PROFILE: JAVASCRIPT FILLS THIS IN -->
+        <section
+            class="site-detail-section hidden"
+            id="siteDetailSection"
+        >
+            <div id="siteDetail"></div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Terrestrial Analogue Explorer ·
+            NASA Space Apps Challenge 2026
+        </p>
+
+        <p class="footer-note">
+            Terrestrial analogues inform planetary research,
+            but Earth conditions do not perfectly replicate
+            the Moon or Mars.
+        </p>
+    </footer>
+
+
+    <!-- Leaflet map library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Our website code -->
+    <script src="script.js"></script>
+
+</body>
+</html>
